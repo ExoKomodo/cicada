@@ -13,6 +13,10 @@ for tag in ${TAG_VALUES}; do
 	TAGS="${TAGS} -t ${tag}"
 done
 
-docker build ${TAGS} -f Dockerfiles/${CICADA_NAME}/Dockerfile .
+docker build \
+	--mount type=bind,source="$(pwd)",target=/app \
+	${TAGS} \
+	-f Dockerfiles/${CICADA_NAME}/Dockerfile \
+	.
 
 log "Successfully built container image!"
