@@ -14,7 +14,6 @@ for tag in ${TAG_VALUES}; do
 done
 
 docker build \
-	--mount type=bind,source="$(pwd)",target=/app \
 	${TAGS} \
 	-f Dockerfiles/${CICADA_NAME}/Dockerfile \
 	.
