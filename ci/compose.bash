@@ -12,7 +12,7 @@ COMPOSE_SERVICE=$1
 shift
 
 env
-COMPOSE_PRE_ARGS="-f ${CICADA_PIPELINES_DIR}/docker-compose.yaml -p ${PROJECT_NAME}"
+COMPOSE_PRE_ARGS="${CICADA_PRE_ARG_FILE} -p ${PROJECT_NAME}"
 COMPOSE_POST_ARGS="--build --abort-on-container-exit"
 
 docker-compose ${COMPOSE_FILE_ARG} up ${COMPOSE_POST_ARGS} ${COMPOSE_SERVICE}

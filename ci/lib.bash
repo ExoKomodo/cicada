@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export CICADA_PRE_ARG_FILE="-f ${CICADA_COMPOSE_DIR}/docker-compose.yaml"
+
 function build_tag_values() {
 	if [[ ${BRANCH_NAME} = ${CI_PRD_BRANCH} ]]; then
 		local REPO=${CICADA_DOCKER_HUB_USERNAME}/${CICADA_DOCKER_HUB_PRD_PROJECT}

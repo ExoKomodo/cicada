@@ -15,7 +15,7 @@ done
 
 docker build \
 	${TAGS} \
-	-f ${CICADA_PIPELINES_DIR}/${CICADA_NAME}/Dockerfile \
+	-f ${CICADA_COMPOSE_DIR}/${CICADA_NAME}/Dockerfile \
 	.
 
 log "Successfully built container image!"
