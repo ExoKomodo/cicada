@@ -11,10 +11,9 @@ shift
 COMPOSE_SERVICE=$1
 shift
 
-env
 COMPOSE_PRE_ARGS="${CICADA_PRE_ARG_FILE} -p ${PROJECT_NAME}"
 COMPOSE_POST_ARGS="--build --abort-on-container-exit"
 
-docker-compose ${COMPOSE_FILE_ARG} up ${COMPOSE_POST_ARGS} ${COMPOSE_SERVICE}
+docker-compose ${COMPOSE_PRE_ARGS} up ${COMPOSE_POST_ARGS} ${COMPOSE_SERVICE}
 
 log "Successfully ran docker compose!"
