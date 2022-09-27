@@ -1,5 +1,9 @@
 #! /bin/bash
 
+export CICADA_ROOT_DIR=".cicada"
+export CICADA_COMPOSE_DIR="${CICADA_ROOT_DIR}/compose"
+export CICADA_HEAD_DIR="${CICADA_ROOT_DIR}/.head"
+export CICADA_CI_DIR="${CICADA_HEAD_DIR}/ci"
 export CICADA_PRE_ARG_FILE="-f ${CICADA_COMPOSE_DIR}/docker-compose.yaml"
 
 function build_tag_values() {
