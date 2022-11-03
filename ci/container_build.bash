@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source cicada/ci/lib.bash
+source ${CICADA_CI_DIR}/lib.bash
 
 log "Building container image..."
 

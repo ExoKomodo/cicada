@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source cicada/ci/functions.bash
+source ${CICADA_CI_DIR}/functions.bash
 
 log "Fixing ownership of mounted directories..."
 
