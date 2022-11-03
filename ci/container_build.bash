@@ -13,6 +13,9 @@ for tag in ${TAG_VALUES}; do
 	TAGS="${TAGS} -t ${tag}"
 done
 
-docker build ${TAGS} -f Dockerfiles/${CICADA_NAME}/Dockerfile .
+docker build \
+	${TAGS} \
+	-f ${CICADA_COMPOSE_DIR}/${CICADA_NAME}/Dockerfile \
+	.
 
 log "Successfully built container image!"

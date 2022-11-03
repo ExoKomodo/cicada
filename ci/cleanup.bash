@@ -6,6 +6,6 @@ log "Cleaning up docker compose images..."
 
 set -e
 
-docker-compose down --rmi all
+docker-compose ${CICADA_PRE_ARG_FILE} down --rmi all
 
 log "Successfully cleaned up docker compose images!"
