@@ -1,6 +1,8 @@
 #! /bin/bash
 
-source ${CICADA_CI_DIR}/lib.bash
+function log() {
+	echo "[CICADA] $@"
+}
 
 log "Fixing ownership of mounted directories..."
 
